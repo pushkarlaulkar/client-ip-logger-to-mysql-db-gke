@@ -52,6 +52,6 @@ Instructions to deploy **Client IP Logger in MySQL DB** on GCP GKE Auto Pilot cl
      ```
      kubectl -n web apply -f ingress-all.yml
      ```
-  9. Run ` kubectl -n yopass get ingress ` to retrieve the ALB IP ( Please wait couple of minutes ). Create an A record in **Cloud DNS** or your own DNS service pointing your domain name to this IP.
- 10. Once the DNS entry has been added it will take couple of minutes ( can be 60 minutes in some cases ) for the certificate to be generated. Run ` kubectl -n yopass get managedcertificate ` or in GCP console to check for **Active** status.
+  9. Run ` kubectl -n web get ingress ` to retrieve the ALB IP ( Please wait couple of minutes ). Create an A record in **Cloud DNS** or your own DNS service pointing your domain name to this IP.
+ 10. Once the DNS entry has been added it will take couple of minutes ( can be 60 minutes in some cases ) for the certificate to be generated. Run ` kubectl -n web get managedcertificate ` or in GCP console to check for **Active** status.
  11. Access the app using `https://your_domain_name`.
